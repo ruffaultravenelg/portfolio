@@ -1,0 +1,147 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    border-bottom: 4px solid #3D826F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    margin: 0 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.2s;
+}
+nav ul li a:hover {
+    color: #3D826F;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+    position: relative;
+    height: 100vh;
+}
+.hero-left{
+    position: absolute;
+    width: 35%;
+    left: 0;
+    top: 30vh;
+}
+.hero-right{
+    position: absolute;
+    width: 35%;
+    right: 0;
+    top: 20vh;
+}
+
+.hero-title {
+    font-size: 90px;
+    position: absolute;
+    left: 10%;
+    top: 40vh;
+}
+
+.hero-title .first-name {
+    color: #3D826F; /* Teinte verte */
+}
+
+.hero-title .last-name {
+    color: black;
+}
+
+.hero-me{
+    position: absolute;
+    width: 20%;
+    border-radius: 50%;
+    right: 12%;
+    top: calc(20vh + 45px);
+}
+
+/* PARCOURS */
+.parcours{
+    background-color: #E6F1EE;
+    width: 100%;
+    height: 70vh;
+    padding: 10%;
+}
+h2{
+    font-size: 40px;
+}
+
+/* COMPETENCES */
+.competences{
+    background-color: white;
+    width: 100%;
+    height: 70vh;
+    padding: 10%;
+}
+
+/* REALISATIONS */
+.realisations{
+    background-color: #E6F1EE;
+    width: 100%;
+    height: 70vh;
+    padding: 10%;
+}
+
+/* FOOTER */
+footer{
+	height: auto;
+	padding: 30px;
+	background-color: #3D826F;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+footer p{
+	font-weight: 400;
+    color: white;
+}
+footer a{
+    cursor: pointer;
+	font-weight: 400;
+    color: white;
+    text-decoration: none;
+}
+@media (max-width:720px) {
+	footer{
+		flex-direction: column;
+	}
+	footer p{
+		text-align: center;
+	}
+}
