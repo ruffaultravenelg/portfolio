@@ -1,4 +1,8 @@
 /* GENERAL */
+:root{
+    --accent: #3D826F;
+    --lightAccent: #E6F1EE;
+}
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ body {
 /* HEADER */
 header {
     background-color: white;
-    border-bottom: 4px solid #3D826F;
+    border-bottom: 4px solid var(--accent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +46,7 @@ nav ul li a {
     transition-duration: 0.2s;
 }
 nav ul li a:hover {
-    color: #3D826F;
+    color: var(--accent);
 }
 
 /* HERO */
@@ -76,7 +80,7 @@ nav ul li a:hover {
 }
 
 .hero-title .first-name {
-    color: #3D826F; /* Teinte verte */
+    color: var(--accent);
 }
 
 .hero-title .last-name {
@@ -93,7 +97,7 @@ nav ul li a:hover {
 
 /* PARCOURS */
 .parcours{
-    background-color: #E6F1EE;
+    background-color: var(--lightAccent);
     width: 100%;
     height: 70vh;
     padding: 10%;
@@ -106,8 +110,49 @@ h2{
 .competences{
     background-color: white;
     width: 100%;
-    height: 70vh;
     padding: 10%;
+}
+.competences-list{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.competence-categorie{
+    padding: 30px 60px;
+    border-radius: 17px;
+    background-color: var(--lightAccent);
+    text-align: center;
+}
+.competence-categorie-title{
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.competence-categorie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.competence-categorie-list-item{
+    text-align: left;
+}
+.competence-categorie-list-item > i{
+    font-size: 50px;
+    color: var(--accent);
+}
+.competence-categorie-list-item > p:nth-child(2){
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+.competence-categorie-list-item > p:nth-child(3){
+    font-size: 13px;
+    color: black;
 }
 
 /* REALISATIONS */
@@ -122,7 +167,7 @@ h2{
 footer{
 	height: auto;
 	padding: 30px;
-	background-color: #3D826F;
+	background-color: var(--accent);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

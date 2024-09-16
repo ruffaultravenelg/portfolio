@@ -1,0 +1,65 @@
+- name: Développement web
+  competences:
+    - name: HTML
+      subtitle: Théorique & Pratique
+      icon: html5
+    - name: JavaScript
+      subtitle: Théorique & Pratique
+      icon: js
+    - name: CSS
+      subtitle: Théorique & Pratique
+      icon: css3-alt
+    - name: SQL/PL
+      subtitle: Théorique & Pratique
+      icon: solid database
+    - name: PHP
+      subtitle: Théorique
+      icon: php
+    - name: Figma
+      subtitle: Théorique & Pratique
+      icon: figma
+
+- name: Reseaux
+  competences:
+    - name: GNU/Linux
+      subtitle: Théorique & Pratique
+      icon: linux
+    - name: Ubuntu
+      subtitle: Pratique
+      icon: ubuntu
+    - name: Nginx
+      subtitle: Pratique
+      icon: n
+    - name: Flask
+      subtitle: Pratique
+      icon: solid pepper-hot # Pas de powder horn dans font awesome
+    - name: Gunicorn
+      subtitle: Pratique
+      icon: solid horse #Pas l'argent pour le 'unicorn'
+
+- name: Travaux en groupe
+  competences:
+    - name: Git
+      subtitle: Théorique & Pratique
+      icon: git-alt
+    - name: Github
+      subtitle: Pratique
+      icon: github
+    - name: Gantt
+      subtitle: Théorique
+      icon: solid chart-gantt
+
+- name: Langages de programmations
+  competences:
+    - name: C#
+      subtitle: Pratique
+      icon: regular window-maximize
+    - name: Java
+      subtitle: Pratique
+      icon: java
+    - name: C
+      subtitle: Théorique & Pratique
+      icon: solid c
+    - name: Python
+      subtitle: Théorique & Pratique
+      icon: python
