@@ -66,3 +66,48 @@ async function loadCompetences(){
 
 }
 loadCompetences();
+
+// Move to mouse
+const heroLeft = document.querySelector('.hero-left');
+const heroRight = document.querySelector('.hero-right');
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+
+    const FORCE = 10;
+
+    heroLeft.style.transform = `translate(-${mouseX * FORCE}px, ${mouseY * FORCE}px)`;
+    heroRight.style.transform = `translate(${mouseX * FORCE}px, -${mouseY * FORCE}px)`;
+});
+
+
+new Swiper('.card-wrapper', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+        0:{
+            slidesPerView: 1
+        },
+        700:{
+            slidesPerView: 2
+        },
+        1150:{
+            slidesPerView: 3
+        }
+    }
+  
+  });
