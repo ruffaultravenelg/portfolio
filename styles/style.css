@@ -1,7 +1,9 @@
 /* GENERAL */
 :root{
-    --accent: rgb(61, 130, 111);
+    --accent: #3d826f;
     --lightAccent: #E6F1EE;
+    --swiper-navigation-color: var(--accent);
+    --swiper-pagination-color: var(--accent);
 }
 * {
     margin: 0;
@@ -347,6 +349,11 @@ nav ul li a:hover {
     padding: 18px;
     border-radius: 12px;
     text-decoration: none;
+    border: 3px solid transparent;
+    transition-duration: 0.2s;
+}
+.card-list .card-item .card-link:hover{
+    border-color: var(--accent);
 }
 .card-list .card-link .card-image {
     width: 100%;
@@ -371,13 +378,23 @@ nav ul li a:hover {
 }
 .card-list .card-link .card-button{
     padding: 0;
-    font-size: 35px;
     color: var(--accent);
     margin: 30px 0 5px;
     background: none;
     cursor: pointer;
-    border: none;
     transform: rotate(-45deg);
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    border: 3px solid var(--accent);
+}
+.card-list .card-link .card-button img{
+    width: 30px;
+    height: 30px;
 }
 
 /* CONTACT */

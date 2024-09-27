@@ -89,7 +89,7 @@ new Swiper('.card-wrapper', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      dynamicBullets: true
+      dynamicBullets: true,
     },
   
     // Navigation arrows
