@@ -361,12 +361,19 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 10px;
 }
+.card-list .card-link .badges{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 16px 0;
+}
 .card-list .card-link .badge{
     color: var(--accent);
     padding: 8px 16px;
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 16px 0 18px;
     background-color: white;
     width: fit-content;
     border-radius: 50px;
