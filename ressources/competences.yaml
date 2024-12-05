@@ -9,7 +9,7 @@
     - name: CSS
       subtitle: Théorique & Pratique
       icon: css3-alt
-    - name: SQL/PL
+    - name: PL/SQL
       subtitle: Théorique & Pratique
       icon: solid database
     - name: PHP
