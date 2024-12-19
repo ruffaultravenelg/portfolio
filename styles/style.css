@@ -404,6 +404,23 @@ nav ul li a:hover {
     height: 30px;
 }
 
+.portfolio-list{
+}
+.portfolio-list li{
+    list-style: none;
+    margin-top: 10px;
+}
+.portfolio-list a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition-duration: 0.2s;
+}
+.portfolio-list a:hover{
+    margin-left: 5px;
+}
+
 /* CONTACT */
 .contact{
     background-color: #E6F1EE;
