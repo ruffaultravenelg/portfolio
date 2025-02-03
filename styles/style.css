@@ -386,7 +386,7 @@ nav ul li a:hover {
 .card-list .card-link .card-button{
     padding: 0;
     color: var(--accent);
-    margin: 30px 0 5px;
+    margin: 25px 0 5px;
     background: none;
     cursor: pointer;
     transform: rotate(-45deg);
@@ -403,22 +403,10 @@ nav ul li a:hover {
     width: 30px;
     height: 30px;
 }
-
-.portfolio-list{
-}
-.portfolio-list li{
-    list-style: none;
-    margin-top: 10px;
-}
-.portfolio-list a{
+.card-description{
     text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    transition-duration: 0.2s;
-}
-.portfolio-list a:hover{
-    margin-left: 5px;
+    color: rgb(34, 34, 34);
+    margin-top: 5px;
 }
 
 /* CONTACT */

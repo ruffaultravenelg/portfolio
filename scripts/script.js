@@ -67,6 +67,80 @@ async function loadCompetences(){
 }
 loadCompetences();
 
+// Load realisation
+async function loadRealisations(){
+
+    // Folder
+    const folder = "./ressources/realisations/";
+
+    // Get data
+    const realisations = jsyaml.load(await (await fetch('./ressources/realisations.yaml')).text());
+
+    // Get target
+    const realisations_list = document.getElementById('realisations_list');
+
+    // Load data
+    realisations.forEach(categorie => {
+        
+        // Create list item
+        const listItem = document.createElement('li');
+        listItem.className = 'card-item swiper-slide';
+        realisations_list.appendChild(listItem);
+
+        // Create link
+        const link = document.createElement('a');
+        link.href = categorie.link;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.className = 'card-link';
+        listItem.appendChild(link);
+
+        // Create image
+        const image = document.createElement('img');
+        image.src = folder + categorie.icon;
+        image.alt = `Logo de ${categorie.name}`;
+        image.className = 'card-image';
+        link.appendChild(image);
+
+        // Create badges container
+        const badges = document.createElement('div');
+        badges.className = 'badges';
+        link.appendChild(badges);
+
+        // Create badges
+        categorie.tags.forEach(badge => {
+            const badgeElement = document.createElement('p');
+            badgeElement.className = 'badge';
+            badgeElement.textContent = badge;
+            badges.appendChild(badgeElement);
+        });
+
+        // Create title
+        const title = document.createElement('h2');
+        title.className = 'card-title';
+        title.textContent = categorie.name;
+        link.appendChild(title);
+
+        // Create description
+        const description = document.createElement('p');
+        description.className = 'card-description';
+        description.textContent = categorie.description;
+        link.appendChild(description);
+
+        // Create button
+        const button = document.createElement('button');
+        button.className = 'card-button';
+        const buttonImage = document.createElement('img');
+        buttonImage.src = 'ressources/forward_icon.svg';
+        buttonImage.alt = 'Watch more';
+        button.appendChild(buttonImage);
+        link.appendChild(button);
+
+    });
+
+}
+loadRealisations();
+
 // Move to mouse
 const heroLeft = document.querySelector('.hero-left');
 const heroRight = document.querySelector('.hero-right');
