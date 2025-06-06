@@ -17,7 +17,7 @@ tabs.forEach(tab => {
         } else {
             pdf.hidden = true;
             img.hidden = false;
-            img.src = IMG_FODLER + imgSrc;
+            img.src = IMG_FODLER + imgPath;
         }
 
     });
