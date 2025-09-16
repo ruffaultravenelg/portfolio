@@ -140,12 +140,12 @@ nav ul li a:hover {
 .hero-left{
     width: 35%;
     left: 0;
-    top: 30vh;
+    top: 30%;
 }
 .hero-right{
     width: 35%;
     right: 0;
-    top: 20vh;
+    top: 20%;
 }
 
 .hero-title {
@@ -153,7 +153,7 @@ nav ul li a:hover {
     font-size: 6vw;
     position: absolute;
     left: 10%;
-    top: 40vh;
+    top: 40%;
 }
 
 .hero-title .first-name {
@@ -175,6 +175,9 @@ nav ul li a:hover {
     justify-content: center;
     gap: 30px;
 }
+.mobile-pp{
+    display: none;
+}
 
 @media (width <= 930px) {
     .hero-left{
@@ -191,24 +194,80 @@ nav ul li a:hover {
     .hero-buttons {
         flex-direction: column;
         gap: 10px;
-        bottom: 5%;
+        transform: none;
+        width: auto;
+        bottom: 5vw;
+        left: 5vw;
+        right: 5vw;
     }
     .hero-left{
+        display: none;
         width: 60%;
         top: 35vh;
     }
     .hero-right{
+        display: none;
         width: 70%;
         top: 0px;
         transform: rotate(-20deg);
         right: -25%;
     }
     .hero-title {
-        font-size: 35px;
+        position: absolute;
+        top: calc(10% * 2 + 50vw);
+        left: 0;
+        font-size: 8.5vw;
+        width: 100%;
+        text-align: center;
+    }
+    .first-name{
+        font-size: 16vw;
+    }
+    .mobile-pp{
+        display: initial;
+        position: absolute;
+        width: 50vw;
+        height: 50vw;
+        border-radius: 50%;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+    }
+    .mobile-image{
+        position: absolute;
+        border-radius: 50%;
+        z-index: 5;
+        width: 100%;
+    }
+    .pp-star{
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation: ease-out star 3s infinite, linear wait 2s infinite;
+        animation-delay: calc(var(--s) * 1000ms);
+        background-color: var(--accent);
     }
     button{
         font-size: 15px;
         width: 100%;
+    }
+}
+
+@keyframes star{
+    0%{
+        transform: translateX(0) rotate(0deg);
+        border-radius: 50%;
+    }
+    50%{
+        border-radius: 10%;
+        opacity: 0;
+        transform: translate(calc(var(--x) * 50vw / 100), calc(var(--y) * 50vw / 100)) rotate(180deg);
+    }
+    100%{
+        opacity: 0;
     }
 }
 

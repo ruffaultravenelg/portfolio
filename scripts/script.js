@@ -2,7 +2,7 @@
 async function loadCompetences(){
 
     // Get data
-    const competences = jsyaml.load(await (await fetch('./ressources/competences.yaml')).text());
+    const competences = jsyaml.load(await (await fetch('./ressources/db/competences.yaml')).text());
 
     // Get target
     const competences_list = document.getElementById('competences_list');
@@ -74,7 +74,7 @@ async function loadRealisations(){
     const folder = "./ressources/realisations/";
 
     // Get data
-    const realisations = jsyaml.load(await (await fetch('./ressources/realisations.yaml')).text());
+    const realisations = jsyaml.load(await (await fetch('./ressources/db/realisations.yaml')).text());
 
     // Get target
     const realisations_list = document.getElementById('realisations_list');
@@ -131,7 +131,7 @@ async function loadRealisations(){
         const button = document.createElement('button');
         button.className = 'card-button';
         const buttonImage = document.createElement('img');
-        buttonImage.src = 'ressources/forward_icon.svg';
+        buttonImage.src = 'ressources/icons/forward_icon.svg';
         buttonImage.alt = 'Watch more';
         button.appendChild(buttonImage);
         link.appendChild(button);
@@ -145,16 +145,21 @@ loadRealisations();
 const heroLeft = document.querySelector('.hero-left');
 const heroRight = document.querySelector('.hero-right');
 document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;
+    if (window.innerWidth > 750) {
+        const mouseX = e.clientX / window.innerWidth;
+        const mouseY = e.clientY / window.innerHeight;
 
-    const FORCE = 10;
+        const FORCE = 10;
 
-    heroLeft.style.transform = `translate(-${mouseX * FORCE}px, ${mouseY * FORCE}px)`;
-    heroRight.style.transform = `translate(${mouseX * FORCE}px, -${mouseY * FORCE}px)`;
+        heroLeft.style.transform = `translate(-${mouseX * FORCE}px, ${mouseY * FORCE}px)`;
+        heroRight.style.transform = `translate(${mouseX * FORCE}px, -${mouseY * FORCE}px)`;
+    } else {
+        heroLeft.style.transform = '';
+        heroRight.style.transform = '';
+    }
 });
 
-
+// Swipper
 new Swiper('.card-wrapper', {
     // Optional parameters
     loop: true,
