@@ -1,17 +1,57 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
+    <meta name="author" content="Gémino Ruffault--Ravenel">
+    <meta property="og:title" content="Gémino Ruffault--Ravenel - Portfolio">
+    <meta property="og:description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
+    <meta property="og:image" content="{{ asset('images/me.jpg') }}">
+    <meta property="og:url" content="https://gemino.dev">
+    <meta property="og:type" content="website">
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <title>{% block title %}Gémino Ruffault--Ravenel{% endblock %}</title>
+
+    <meta name="theme-color" content="#E6F1EE">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/775cfaa791.js" crossorigin="anonymous"></script>
+
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/#competences">Compétences</a></li>
+                <li><a href="/#parcours">Parcours</a></li>
+                <li><a href="/#realisations">Réalisations</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Gémino Ruffault--Ravenel</p>
+        <a href="https://gemino.dev">gemino.dev</a>
+     </footer>
+
+    <!-- SCRIPTS-->
+    {% block javascripts %}
+    {% endblock %}
+
+</body>
 </html>

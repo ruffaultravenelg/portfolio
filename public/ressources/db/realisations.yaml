@@ -1,0 +1,51 @@
+- name: Senty
+  description: Senty est une application web qui permet de partager des fichiers via un code
+  link: https://github.com/ruffaultravenelg/senty
+  icon: senty.png
+  tags:
+    - Python
+    - Web
+
+- name: Lim compiler
+  description: Compilateur écrit en VB.NET pour mon langage Lim.
+  link: https://github.com/ruffaultravenelg/limc
+  icon: lim.png
+  tags:
+    - VB.NET
+
+- name: Site web BDE
+  description: Site web du BDE réalisé dans le cadre notre SAE 
+  link: https://github.com/SAE-S3-grp1/site
+  icon: sae.png
+  tags:
+    - Web
+    - PHP
+
+- name: FlowByte Compiler
+  description: Compilateur de ByteCode FlowByte.
+  link: https://github.com/ruffaultravenelg/fbc
+  icon: fbc.png
+  tags:
+    - VB.NET
+
+- name: FlowByte Interpreter
+  description: Interpreteur de ByteCode FlowByte généré par FBC.
+  link: https://github.com/ruffaultravenelg/fbi
+  icon: fbi.png
+  tags:
+    - C
+
+- name: EDT Personnalisé
+  description: EDT Personnalisé pour remplacer celui de l'IUT.
+  link: https://github.com/ruffaultravenelg/edt-front
+  icon: edt.png
+  tags:
+    - Web
+    - Python
+
+- name: Epreuve campus warrior
+  description: Epreuve campus warrior est un projet web
+  link: https://github.com/ruffaultravenelg/campuswarrior
+  icon: campuswarrior.png
+  tags:
+    - Web
