@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\SkillSetRepository;
+use App\Repository\TimelineRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -10,10 +11,11 @@ use Symfony\Component\Routing\Attribute\Route;
 final class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(SkillSetRepository $skillSetRepository): Response
+    public function index(SkillSetRepository $skillSetRepository, TimelineRepository $timelineRepository): Response
     {
         return $this->render('home/index.html.twig', [
             'skillSets' => $skillSetRepository->findAll(),
+            'timelines' => $timelineRepository->findAll(),
         ]);
     }
 }

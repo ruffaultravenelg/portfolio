@@ -341,6 +341,14 @@ nav ul li a:hover {
     width: 100%;
     padding: 10%;
 }
+
+.parcours h2{
+    margin-top: 4rem;
+}
+.parcours h2:first-child{
+    margin-top: 0;
+}
+
 .timeline {
     position: relative;
     padding-left: 20px;
@@ -372,7 +380,8 @@ nav ul li a:hover {
     font-weight: normal;
     color: var(--accent);
 }
-.timeline-element p{
+.timeline-element div{
+    margin-top: 8px;
     font-size: 18px;
 }
 

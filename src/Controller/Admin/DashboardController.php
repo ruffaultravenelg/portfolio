@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\Skill;
 use App\Entity\SkillSet;
+use App\Entity\Timeline;
+use App\Entity\TimelineItem;
 use EasyCorp\Bundle\EasyAdminBundle\Attribute\AdminDashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -29,7 +31,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Compétences', 'fas fa-layer-group', SkillSet::class);
-        yield MenuItem::linkToCrud('Skills', 'fas fa-code', Skill::class);
+        yield MenuItem::linkToCrud('Catégorie de compétences', 'fas fa-layer-group', SkillSet::class);
+        yield MenuItem::linkToCrud('Compétences', 'fas fa-code', Skill::class);
+        yield MenuItem::linkToCrud('Timelines', 'fa-solid fa-timeline', Timeline::class);
+        yield MenuItem::linkToCrud('Timeline item', 'fa-regular fa-calendar', TimelineItem::class);
     }
 }

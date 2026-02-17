@@ -21,10 +21,6 @@ class SkillSetCrudController extends AbstractCrudController
         return [
             IdField::new('id')->hideOnForm(),
             TextField::new('name', 'Nom de la catégorie'),
-            
-            CollectionField::new('skills', 'Compétences associées')
-                ->useEntryCrudForm() // Utilise le formulaire de SkillCrudController
-                ->renderExpanded() // Affiche la liste ouverte
         ];
     }
     
