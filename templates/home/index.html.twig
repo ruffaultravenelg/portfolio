@@ -67,7 +67,11 @@
             <div class="competence-categorie-list">
             {% for skill in skillSet.skills %}
             <div class="competence-categorie-list-item">
-                <i class="fa-brands fa-{{ skill.icon }}"></i>
+                {% set parts = skill.icon|split(' ') %}
+                {% set type = (parts|length > 1) ? parts[0] : 'brands' %}
+                {% set name = parts|last %}
+
+                <i class="fa-{{ type }} fa-{{ name }}"></i>
                 <p>{{ skill.name }}</p>
                 <p>{{ skill.description }}</p>
             </div>

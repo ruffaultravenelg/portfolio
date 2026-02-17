@@ -78,4 +78,9 @@ class Skill
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->name ?? 'Nouvelle compétence';
+    }
 }
