@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script> 
+    <link rel="stylesheet" href="{{ asset('styles/home.css') }}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 {% endblock %}
 
 {% block javascripts %}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!--<script src="{{ asset('scripts/home.js') }}"></script> -->
+    <script type="module" src="{{ asset('scripts/home.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -93,9 +93,7 @@
         <div class="timeline-element">
             <h4>{{ item.date }}</h4>
             <h3>{{ item.title }}</h3>
-            <p>
-                {{ item.description | raw }}
-            </p>
+            <p>{{ item.description | raw }}</p>
         </div>
         {% endfor %}
     </div>
@@ -107,20 +105,38 @@
 <section class="realisations" id="realisations">
     <h2>Réalisations</h2>
 
-    <div class="container swiper">
-        <div class="card-wrapper">
-            <ul class="card-list swiper-wrapper" id="realisations_list">
+    <div class="swiper mySwiper">
+        <ul class="swiper-wrapper card-list">
+            {% for production in productions %}
+            <li class="swiper-slide card-item">
+                <a href="{{ production.url }}" target="_blank" class="card-link">
+                    <div class="image-container">
+                        <img src="{{ asset('uploads/productions/' ~ production.image) }}" alt="{{ production.title }}" class="card-image">
+                    </div>
 
-                <!-- AUTO COMPLETED -->
+                    <div class="badges">
+                        {% set tags = production.tags|split(',') %}
+                        {% for badge in tags %}
+                            <span class="badge">{{ badge|trim }}</span>
+                        {% endfor %}
+                    </div>
 
-            </ul>
+                    <h3 class="card-title">{{ production.title }}</h3>
+                    <p class="card-description">{{ production.shortDescription }}</p>
 
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+                    <div class="card-button">
+                        <img src="{{ asset('images/icons/forward_icon.svg') }}" alt="Plus d'infos">
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <div class="swiper-pagination"></div>
     </div>
-
 </section>
 
 <!-- CONTACT -->

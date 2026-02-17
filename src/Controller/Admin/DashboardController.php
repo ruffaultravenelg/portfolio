@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Production;
 use App\Entity\Skill;
 use App\Entity\SkillSet;
 use App\Entity\Timeline;
@@ -30,10 +31,12 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
+        // php bin/console make:admin:crud
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Catégorie de compétences', 'fas fa-layer-group', SkillSet::class);
         yield MenuItem::linkToCrud('Compétences', 'fas fa-code', Skill::class);
         yield MenuItem::linkToCrud('Timelines', 'fa-solid fa-timeline', Timeline::class);
         yield MenuItem::linkToCrud('Timeline item', 'fa-regular fa-calendar', TimelineItem::class);
+        yield MenuItem::linkToCrud('Realisations', 'fa-solid fa-book', Production::class);
     }
 }
