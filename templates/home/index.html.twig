@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% block meta %}
+<meta name="description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
+<meta name="author" content="Gémino Ruffault--Ravenel">
+<meta property="og:title" content="Gémino Ruffault--Ravenel - Portfolio">
+<meta property="og:description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
+<meta property="og:image" content="{{ asset('images/me.jpg') }}">
+<meta property="og:url" content="https://gemino.dev">
+<meta property="og:type" content="website">
+{% endblock %}
+
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('styles/home.css') }}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -109,7 +119,7 @@
         <ul class="swiper-wrapper card-list">
             {% for production in productions %}
             <li class="swiper-slide card-item">
-                <a href="{{ production.url }}" target="_blank" class="card-link">
+                <a href="{{ path('production', {id: production.id}) }}" class="card-link">
                     <div class="image-container">
                         <img src="{{ asset('uploads/productions/' ~ production.image) }}" alt="{{ production.title }}" class="card-image">
                     </div>
@@ -139,18 +149,39 @@
     </div>
 </section>
 
+<!-- HOBBIES -->
+<section class="hobbies" id="hobbies">
+
+    {% for hobby in hobbies %}
+    <div class="hobby">
+
+        <div class="hobby-image">
+            <img src="{{ asset('uploads/hobbies/' ~ hobby.image) }}" alt="{{ hobby.title }}">
+        </div>
+
+        <div class="hobby-content">
+            <h2>{{ hobby.title }}</h2>
+            <p>
+                {{ hobby.text | raw }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
     <h2>Contact</h2>
 
-    <a href="mailto:gemino.ruffault-ravenel.etu@univ-lemans.fr">
+    <a href="mailto:gemino.ruffaultravenel@gmail.com">
         <img src="{{ asset('images/icons/email_icon.svg') }}" alt="Email icon">
-        <strong>Adresse mail :</strong> gemino.ruffault-ravenel.etu@univ-lemans.fr
+        <strong>Adresse mail :</strong> gemino.ruffaultravenel@gmail.com
     </a>
 
-    <a href="tel:gemino.ruffault-ravenel.etu@univ-lemans.fr">
+    <a href="tel:+33673034971">
         <img src="{{ asset('images/icons/phone_icon.svg') }}" alt="Phone icon">
-        <strong>Numéro de téléphone :</strong> 06 45 82 60 71
+        <strong>Numéro de téléphone :</strong> 06 73 03 49 71
     </a>
 
 </section>

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Hobby;
 use App\Entity\Production;
 use App\Entity\Skill;
 use App\Entity\SkillSet;
@@ -38,5 +39,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Timelines', 'fa-solid fa-timeline', Timeline::class);
         yield MenuItem::linkToCrud('Timeline item', 'fa-regular fa-calendar', TimelineItem::class);
         yield MenuItem::linkToCrud('Realisations', 'fa-solid fa-book', Production::class);
+        yield MenuItem::linkToCrud('Hobbies', 'fa-solid fa-masks-theater', Hobby::class);
     }
 }

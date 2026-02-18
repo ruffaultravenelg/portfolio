@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
-    <meta name="author" content="Gémino Ruffault--Ravenel">
-    <meta property="og:title" content="Gémino Ruffault--Ravenel - Portfolio">
-    <meta property="og:description" content="Étudiant en BUT Informatique à Laval, actuellement à la recherche d'un stage.">
-    <meta property="og:image" content="{{ asset('images/me.jpg') }}">
-    <meta property="og:url" content="https://gemino.dev">
-    <meta property="og:type" content="website">
+    {% block meta %}
+    {% endblock %}
 
     <title>{% block title %}Gémino Ruffault--Ravenel{% endblock %}</title>
 
@@ -36,6 +31,7 @@
                 <li><a href="/#competences">Compétences</a></li>
                 <li><a href="/#parcours">Parcours</a></li>
                 <li><a href="/#realisations">Réalisations</a></li>
+                <li><a href="/#hobbies">Centres d'intérêt</a></li>
                 <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>

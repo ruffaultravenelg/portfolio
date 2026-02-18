@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
     background-color: white;
     position: relative;
     height: 100vh;
@@ -357,9 +356,34 @@
     margin-top: 5px;
 }
 
+/* HOBBIES */
+.hobbies{
+    width: 100%;
+}
+.hobbies .hobby{
+    background-color: var(--lightAccent);
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    gap: 2rem;
+}
+.hobbies .hobby:nth-child(even) {
+    background-color: white;
+    flex-direction: row-reverse;
+}
+.hobby-image img{
+    height: 50vh;
+    border-radius: 12px;    
+}
+.hobby-content{
+    flex: 1;
+}
+
+
 /* CONTACT */
 .contact{
-    background-color: #E6F1EE;
+    border-top: 4px solid var(--lightAccent);
+    background-color: white;
     width: 100%;
     padding: 10%;
 }

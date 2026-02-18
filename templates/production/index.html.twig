@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+<meta name="description" content="{{ production.title }}">
+<meta name="author" content="Gémino Ruffault--Ravenel">
+<meta property="og:title" content="Gémino Ruffault--Ravenel - {{ production.title }}">
+<meta property="og:description" content="{{ production.title }}">
+<meta property="og:image" content="{{ asset('uploads/productions/' ~ production.image) }}">
+<meta property="og:url" content="https://gemino.dev/realisation/{{ production.id }}">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block title %} {{ production.title }} {% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/production.css') }}"/>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+<!-- MAIN CONTENT -->
+<main class="production-main">
+
+    <div class="production-header">
+        <div class="production-header-title">
+            <img src="{{ asset('uploads/productions/' ~ production.image) }}" alt="{{ production.title }}" />
+            <h1>{{ production.title }}</h1>
+        </div>
+        {% if production.url %}
+        <button class="accent-btn"><a href="{{ production.url }}" target="_blank">
+            <img src="{{ asset('images/icons/open_in_browser.svg') }}" alt="Open in browser icon">
+            Voir plus
+        </a></button>
+        {% endif %}
+    </div>
+
+    {{ production.text | raw }}
+
+</main>
+
+{% endblock %}

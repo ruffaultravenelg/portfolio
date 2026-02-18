@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ProductionRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductionRepository::class)]
@@ -27,6 +28,9 @@ class Production
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $text = null;
 
     public function getId(): ?int
     {
@@ -94,6 +98,18 @@ class Production
     public function setImage(string $image): static
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getText(): ?string
+    {
+        return $this->text;
+    }
+
+    public function setText(string $text): static
+    {
+        $this->text = $text;
 
         return $this;
     }
