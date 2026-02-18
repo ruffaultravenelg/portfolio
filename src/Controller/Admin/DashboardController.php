@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Globals;
 use App\Entity\Hobby;
 use App\Entity\LinkAlias;
 use App\Entity\Production;
@@ -34,7 +35,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         // php bin/console make:admin:crud
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        //yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Globales', 'fa-solid fa-square-root-variable', Globals::class);
         yield MenuItem::linkToCrud('Catégorie de compétences', 'fas fa-layer-group', SkillSet::class);
         yield MenuItem::linkToCrud('Compétences', 'fas fa-code', Skill::class);
         yield MenuItem::linkToCrud('Timelines', 'fa-solid fa-timeline', Timeline::class);
