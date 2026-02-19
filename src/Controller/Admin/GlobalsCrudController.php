@@ -8,6 +8,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FileUploadField;
+use Symfony\Component\Validator\Constraints\File;
 
 class GlobalsCrudController extends AbstractCrudController
 {
@@ -30,6 +32,11 @@ class GlobalsCrudController extends AbstractCrudController
                 ->setUploadDir('public/uploads/cv')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false)
+                ->setFileConstraints(new File([
+                    'maxSize' => '5M',
+                    'mimeTypes' => ['application/pdf', 'application/x-pdf'],
+                    'mimeTypesMessage' => 'Veuillez uploader un document PDF valide',
+                ])),
         ];
     }
     

@@ -24,7 +24,7 @@ class TimelineItem
 
     #[ORM\ManyToOne(inversedBy: 'timelineItems')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?timeline $timeline = null;
+    private ?Timeline $timeline = null;
 
     public function getId(): ?int
     {
