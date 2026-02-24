@@ -263,7 +263,7 @@
 }
 .timeline-element div{
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .timeline-element::before {
@@ -277,6 +277,15 @@
     border-radius: 50%;
     background-color: var(--accent);
     border: 2px solid var(--lightAccent);
+}
+
+@media (max-width: 720px) {
+    .timeline-element div{
+        text-align: justify;
+    }
+    .parcours{
+        padding: 5%;
+    }
 }
 
 /* REALISATIONS */
@@ -379,6 +388,18 @@
     flex: 1;
 }
 
+@media (max-width: 720px) {
+    .hobbies .hobby{
+        flex-direction: column;
+    }
+    .hobbies .hobby:nth-child(even) {
+        flex-direction: column;
+    }
+    .hobby-image img{
+        width: 100%;
+        height: auto;
+    }
+}
 
 /* CONTACT */
 .contact{
@@ -405,4 +426,17 @@
 .contact strong{
     font-weight: 500;
     color: var(--accent);
+}
+.contact-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 720px) {
+    .contact a{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

@@ -29,7 +29,7 @@ class ProductionCrudController extends AbstractCrudController
             TextField::new('title', 'Titre'),
             TextField::new('short_description', 'Description courte'), 
             UrlField::new('url', 'Lien du projet'), 
-            TextField::new('tags', 'Tags (séparés par des virgules)'), 
+            TextField::new('tags', 'Tags (séparés par des virgules)'),
             TextEditorField::new('text', 'Description complète'), 
         ];
     }

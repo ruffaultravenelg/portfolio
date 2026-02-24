@@ -103,7 +103,7 @@
         <div class="timeline-element">
             <h4>{{ item.date }}</h4>
             <h3>{{ item.title }}</h3>
-            <p>{{ item.description | raw }}</p>
+            {{ item.description | raw }}
         </div>
         {% endfor %}
     </div>
@@ -175,13 +175,19 @@
     <h2>Contact</h2>
 
     <a href="mailto:{{ global.email }}">
-        <img src="{{ asset('images/icons/email_icon.svg') }}" alt="Email icon">
-        <strong>Adresse mail :</strong> {{ global.email }}
+        <span class="contact-title">
+            <img src="{{ asset('images/icons/email_icon.svg') }}" alt="Email icon">
+            <strong>Adresse mail :</strong>
+        </span>
+        {{ global.email }}
     </a>
 
     <a href="tel:{{ global.phone }}">
-        <img src="{{ asset('images/icons/phone_icon.svg') }}" alt="Phone icon">
-        <strong>Numéro de téléphone :</strong> {{ global.phone }}
+        <span class="contact-title">
+            <img src="{{ asset('images/icons/phone_icon.svg') }}" alt="Phone icon">
+            <strong>Numéro de téléphone :</strong>
+        </span>
+        {{ global.phone }}
     </a>
 
 </section>

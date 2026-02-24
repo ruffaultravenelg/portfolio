@@ -10,6 +10,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: 18px;
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -28,7 +29,13 @@ body {
 
 /* TEXTS */
 h2{
-    font-size: 40px;
+    font-size: 2rem;
+}
+
+@media (max-width: 720px) {
+    h2{
+        font-size: 1.5rem;
+    }
 }
 
 /* BUTTONS */
@@ -114,7 +121,7 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--accent);
 }
-@media (width <= 750px) {
+@media (max-width:720px) {
     header {
         display: none;
     }
@@ -142,8 +149,9 @@ footer a{
 @media (max-width:720px) {
 	footer{
 		flex-direction: column;
+        gap: 1rem;
 	}
-	footer p{
+	footer p, footer a{
 		text-align: center;
 	}
 }

@@ -2,6 +2,7 @@
     width: 100%;
     min-height: 95vh;
     padding: 10%;
+    padding-top: calc(80px + 2rem);
 }
 
 .production-header {
@@ -26,4 +27,18 @@
 }
 h1 {
     font-size: 1.6rem;
+}
+
+@media (max-width: 720px) {
+    .production-main {
+        padding-top: 10%;
+    }
+    .production-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .production-header-title {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
