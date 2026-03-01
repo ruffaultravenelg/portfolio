@@ -23,6 +23,7 @@ class ProductionCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             ImageField::new('image', 'Image')
                 ->setBasePath('uploads/productions')
+                ->setRequired(false)
                 ->setUploadDir('public/uploads/productions')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(true),
@@ -30,7 +31,7 @@ class ProductionCrudController extends AbstractCrudController
             TextField::new('short_description', 'Description courte'), 
             UrlField::new('url', 'Lien du projet'), 
             TextField::new('tags', 'Tags (séparés par des virgules)'),
-            TextEditorField::new('text', 'Description complète'), 
+            TextEditorField::new('text', 'Description complète'),
         ];
     }
 }

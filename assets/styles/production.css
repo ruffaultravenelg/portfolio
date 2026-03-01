@@ -3,6 +3,8 @@
     min-height: 95vh;
     padding: 10%;
     padding-top: calc(80px + 2rem);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .production-header {
@@ -27,6 +29,13 @@
 }
 h1 {
     font-size: 1.6rem;
+}
+
+.content {
+    text-align: justify;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 @media (max-width: 720px) {
