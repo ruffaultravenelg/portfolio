@@ -53,9 +53,9 @@ h1 {
 }
 
 .content figcaption {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
-    color: #3d3030;
+    color: #666;
     margin-top: 0.5rem;
 }
 
@@ -65,6 +65,16 @@ h1 {
     border-radius: 0.5rem;
     border: 1px solid #ddd;
     overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.content ol, .content ul {
+    padding-left: 2rem;
+}
+
+.content li {
+    padding-left: 0.5rem;
 }
 
 @media (max-width: 720px) {
