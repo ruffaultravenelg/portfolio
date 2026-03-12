@@ -1,0 +1,1 @@
+sudo -u www-data php bin/console cache:clear
