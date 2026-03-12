@@ -26,6 +26,9 @@ class TimelineItem
     #[ORM\JoinColumn(nullable: false)]
     private ?Timeline $timeline = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $position = 0;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -82,5 +85,17 @@ class TimelineItem
     public function __toString(): string
     {
         return $this->title ?? 'Nouvel item';
+    }
+
+    public function getPosition(): ?int
+    {
+        return $this->position;
+    }
+
+    public function setPosition(?int $position): static
+    {
+        $this->position = $position;
+
+        return $this;
     }
 }

@@ -280,9 +280,6 @@
 }
 
 @media (max-width: 720px) {
-    .timeline-element div{
-        text-align: justify;
-    }
     .parcours{
         padding: 5%;
     }

@@ -21,6 +21,7 @@ class Timeline
     /**
      * @var Collection<int, TimelineItem>
      */
+    #[ORM\OrderBy(['position' => 'DESC'])]
     #[ORM\OneToMany(targetEntity: TimelineItem::class, mappedBy: 'timeline', orphanRemoval: true)]
     private Collection $timelineItems;
 

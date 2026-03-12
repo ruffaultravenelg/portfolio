@@ -40,4 +40,8 @@ const swiper = new Swiper(".mySwiper", {
             spaceBetween: 40,
         },
     },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false, 
+    },
 });
