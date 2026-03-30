@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.read</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="reader">
+        <div class="reader-text">
+            <div class="letter-container" id="letter_container">
+                <!-- AUTOFILLED
+                <span>g</span>
+                <span class="main">i</span>
+                <span>v</span>
+                <span>e</span>
+                -->
+            </div>
+        </div>
+    </div>
+
+    <div class="writer" id="writer_container" hidden>
+        <textarea name="text" id="text" cols="30" rows="10" placeholder="Entrez un texte ici...">Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.</textarea>
+    </div>
+
+    <div class="buttons">
+        <button id="play_btn"><img src="./assets/play.svg" alt="Play">Démarrer</button>
+        <button id="edit_btn"><img src="./assets/edit.svg" alt="Editer">Editer</button>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
